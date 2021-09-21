@@ -3,7 +3,7 @@ export default class ImageItem extends Component {
     render() {
         return (
             <li>
-           {this.props.url}
+            <img src={this.props.url} alt="" />
            {this.props.title}
            {this.props.description}
            {this.props.keyword}
