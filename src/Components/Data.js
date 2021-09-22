@@ -105,14 +105,14 @@ const Images = [
     },
     {
       url:
-        "https://cdn.modernfarmer.com/wp-content/uploads/2014/08/28476658_9c97f35096_o.jpg",
+      "https://www.torontozoo.com/img/1200/20190417020626044MouflonDSC1705.jpg",
       title: "Mouflon",
       description: "Those horns though",
       keyword: "mouflon",
       horns: 2
     },
     {
-      url: "https://cdn.modernfarmer.com/wp-content/uploads/2014/08/addax.jpg",
+      url: "https://i.pinimg.com/600x315/4b/9b/a6/4b9ba66cb1e2c996f5238a7c0931cc13.jpg",
       title: "Addax",
       description:
         "This guy is basically extinct but survives well in captivity, so they're frequently found in zoos",
@@ -129,7 +129,7 @@ const Images = [
     },
     {
       url:
-        "https://cdn.modernfarmer.com/wp-content/uploads/2014/08/chameleon.jpg",
+        "https://i.redd.it/8sw17gomhs771.jpg",
       title: "Happy Jackson's Chameleon",
       description: "These are really common in Hawaii",
       keyword: "chameleon",
