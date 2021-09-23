@@ -4,42 +4,47 @@ import Header from './Components/Header.js'
 import ImageList from './Components/ImageList.js'
 import images from './Components/Data.js'
 import './App.css'
+import Dropdown from './Components/Dropdown.js'
 export default class App extends Component {
   
   state = {
     keyword: '',
+    horns: ''
   }
   filterAnimal = (e) => {
     /* e.target.value is special, always e.target.value */
     this.setState({keyword: e.target.value})
   }
+
+  hornedAnimal = (e) => {
+    this.setState({horns: Number(e.target.value)})
+  }
   render() {
-    const filterAnimal = images.filter((horned) => {
+    const filterAnimal = images.filter((animal) => {
       if(!this.state.keyword){
         return true;
       } else
       {
-       return horned.keyword === this.state.keyword
+       return animal.keyword === this.state.keyword
+      }
+    }).filter((horned) => {
+      if(!this.state.horns){
+        return true;
+      } else
+      {
+       return horned.horns === this.state.horns
       }
     }) 
-    console.log(filterAnimal);
+
+
+
+
+
     return (
       <div>
         <Header />
-        <select className="header" onChange={this.filterAnimal}>
-          <option value="">All</option>
-           <option value="narwhal">Narwhal</option>
-           <option value="rhino">Rhino</option>
-           <option value="unicorn">Unicorn</option>
-           <option value="unilego">Unilego</option>
-           <option value="triceratops">Triceratops</option>
-           <option value="markhor">Markhor</option>
-           <option value="mouflon">Mouflon</option>
-           <option value="addax">Addax</option>
-           <option value="chamelon">Chameleon</option>
-           <option value="lizard">Lizard</option>
-           <option value="dragon">Dragon</option>
-       </select>
+        <Dropdown filterChange={this.hornedAnimal} options={[1, 2, 3, 100]} />
+        <Dropdown filterChange={this.filterAnimal} options={["narwhal", "rhino", "unicorn", "unilego", "triceratops", "markhor", "mouflon","addax", "chameleon", "lizard", "dragon"]} />
         <ImageList images={filterAnimal} />
       </div>
     )

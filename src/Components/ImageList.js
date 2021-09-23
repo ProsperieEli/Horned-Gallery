@@ -7,8 +7,7 @@ export default class ImageList extends Component {
                 {this.props.images.map(image => {
                 return <ImageItem 
                 url={image.url} 
-                title={image.title}
-                description={image.description}
+                
                 />})}
                 
     
